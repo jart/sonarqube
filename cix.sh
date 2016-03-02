@@ -33,7 +33,7 @@ case "$RUN_ACTIVITY" in
     ;;
 
   run-upgrade-tests-*)
-    DB_ENGINE=`echo $RUN_ACTIVITY | sed "s/run-db-unit-tests-//g"`
+    DB_ENGINE=`echo $RUN_ACTIVITY | sed "s/run-upgrade-tests--//g"`
     ./run-upgrade-tests.sh "http://infra.internal.sonarsource.com/jenkins/orch-${DB_ENGINE}.properties"
     ;;
 
