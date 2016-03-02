@@ -26,6 +26,12 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.codehaus.sonar</groupId>
+      <artifactId>sonar-update-center-common</artifactId>
+      <version>1.12.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
