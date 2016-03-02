@@ -41,11 +41,39 @@
       <artifactId>assertj-core</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.oracle</groupId>
-      <artifactId>ojdbc6</artifactId>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
+
+  <profiles>
+    <profile>
+      <id>with-db-drivers</id>
+      <activation>
+        <property>
+          <name>with-db-drivers</name>
+        </property>
+      </activation>
+      <dependencies>
+        <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.postgresql</groupId>
+          <artifactId>postgresql</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>com.oracle</groupId>
+          <artifactId>ojdbc6</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>com.microsoft.sqljdbc</groupId>
+          <artifactId>sqljdbc41</artifactId>
+          <version>4.1</version>
+          <scope>system</scope>
+          <systemPath>${project.basedir}/../../sonar-application/src/main/assembly/lib/jdbc/mssql/sqljdbc41.jar
+          </systemPath>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 
 </project>

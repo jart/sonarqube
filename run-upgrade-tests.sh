@@ -15,5 +15,6 @@ shift 1
 
 cd tests/upgrade
 mvn verify \
+  -Pwith-db-drivers \
   -Dorchestrator.configUrl=$ORCHESTRATOR_CONFIG_URL \
   -B -e -V $*
