@@ -2309,6 +2309,23 @@ public final class CoreMetrics {
     .setDeleteHistoricalData(true)
     .create();
 
+  /**
+   * @since 5.5
+   */
+  public static final String RELIABILITY_RATING_KEY = "reliability_rating";
+
+  /**
+   * @since 5.5
+   */
+  public static final Metric<Integer> RELIABILITY_RATING = new Metric.Builder(RELIABILITY_RATING_KEY, "Reliability Rating", Metric.ValueType.RATING)
+    .setDomain(DOMAIN_RELIABILITY)
+    .setDirection(Metric.DIRECTION_WORST)
+    .setQualitative(true)
+    .setBestValue(1.0)
+    .setWorstValue(5.0)
+    .create();
+
+
   // --------------------------------------------------------------------------------------------------------------------
   //
   // SECURITY CHARACTERISTIC
@@ -2347,6 +2364,22 @@ public final class CoreMetrics {
     .setBestValue(0.0)
     .setQualitative(true)
     .setDeleteHistoricalData(true)
+    .create();
+
+  /**
+   * @since 5.5
+   */
+  public static final String SECURITY_RATING_KEY = "security_rating";
+
+  /**
+   * @since 5.5
+   */
+  public static final Metric<Integer> SECURITY_RATING = new Metric.Builder(SECURITY_RATING_KEY, "Security Rating", Metric.ValueType.RATING)
+    .setDomain(DOMAIN_SECURITY)
+    .setDirection(Metric.DIRECTION_WORST)
+    .setQualitative(true)
+    .setBestValue(1.0)
+    .setWorstValue(5.0)
     .create();
 
   // --------------------------------------------------------------------------------------------------------------------
