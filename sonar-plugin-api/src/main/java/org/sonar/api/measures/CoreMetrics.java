@@ -2269,6 +2269,23 @@ public final class CoreMetrics {
     .setQualitative(true)
     .create();
 
+  /**
+   * @since 5.5
+   */
+  public static final String EFFORT_TO_REACH_MAINTAINABILITY_RATING_A_KEY = "effort_to_reach_maintainability_rating_a";
+
+  /**
+   * @since 5.5
+   */
+  public static final Metric<Long> EFFORT_TO_REACH_MAINTAINABILITY_RATING_A = new Metric.Builder(EFFORT_TO_REACH_MAINTAINABILITY_RATING_A_KEY,
+    "Effort to reach maintainability rating A", Metric.ValueType.WORK_DUR)
+    .setDomain(DOMAIN_MAINTAINABILITY)
+    .setDirection(Metric.DIRECTION_WORST)
+    .setQualitative(true)
+    .setBestValue(0.0)
+    .setOptimizedBestValue(true)
+    .create();
+
   // --------------------------------------------------------------------------------------------------------------------
   //
   // RELIABILITY CHARACTERISTIC
@@ -2283,7 +2300,8 @@ public final class CoreMetrics {
   /**
    * @since 5.5
    */
-  public static final Metric<Long> RELIABILITY_REMEDIATION_EFFORT = new Metric.Builder(RELIABILITY_REMEDIATION_EFFORT_KEY, "Reliability remediation effort", Metric.ValueType.WORK_DUR)
+  public static final Metric<Long> RELIABILITY_REMEDIATION_EFFORT = new Metric.Builder(RELIABILITY_REMEDIATION_EFFORT_KEY, "Reliability remediation effort",
+    Metric.ValueType.WORK_DUR)
     .setDomain(DOMAIN_RELIABILITY)
     .setDirection(Metric.DIRECTION_WORST)
     .setOptimizedBestValue(true)
@@ -2299,7 +2317,8 @@ public final class CoreMetrics {
   /**
    * @since 5.5
    */
-  public static final Metric<Long> NEW_RELIABILITY_REMEDIATION_EFFORT = new Metric.Builder(NEW_RELIABILITY_REMEDIATION_EFFORT_KEY, "Reliability remediation effort on new code", Metric.ValueType.WORK_DUR)
+  public static final Metric<Long> NEW_RELIABILITY_REMEDIATION_EFFORT = new Metric.Builder(NEW_RELIABILITY_REMEDIATION_EFFORT_KEY, "Reliability remediation effort on new code",
+    Metric.ValueType.WORK_DUR)
     .setDescription("Reliability remediation effort of new code")
     .setDomain(DOMAIN_RELIABILITY)
     .setDirection(Metric.DIRECTION_WORST)
@@ -2325,6 +2344,22 @@ public final class CoreMetrics {
     .setWorstValue(5.0)
     .create();
 
+  /**
+   * @since 5.5
+   */
+  public static final String EFFORT_TO_REACH_RELIABILITY_RATING_A_KEY = "effort_to_reach_reliability_rating_a";
+
+  /**
+   * @since 5.5
+   */
+  public static final Metric<Long> EFFORT_TO_REACH_RELIABILITY_RATING_A = new Metric.Builder(EFFORT_TO_REACH_RELIABILITY_RATING_A_KEY, "Effort to reach reliability rating A",
+    Metric.ValueType.WORK_DUR)
+    .setDomain(DOMAIN_RELIABILITY)
+    .setDirection(Metric.DIRECTION_WORST)
+    .setQualitative(true)
+    .setBestValue(0.0)
+    .setOptimizedBestValue(true)
+    .create();
 
   // --------------------------------------------------------------------------------------------------------------------
   //
@@ -2356,7 +2391,8 @@ public final class CoreMetrics {
   /**
    * @since 5.5
    */
-  public static final Metric<Long> NEW_SECURITY_REMEDIATION_EFFORT = new Metric.Builder(NEW_SECURITY_REMEDIATION_EFFORT_KEY, "Security remediation effort on new code", Metric.ValueType.WORK_DUR)
+  public static final Metric<Long> NEW_SECURITY_REMEDIATION_EFFORT = new Metric.Builder(NEW_SECURITY_REMEDIATION_EFFORT_KEY, "Security remediation effort on new code",
+    Metric.ValueType.WORK_DUR)
     .setDescription("Security remediation effort of new code")
     .setDomain(DOMAIN_SECURITY)
     .setDirection(Metric.DIRECTION_WORST)
@@ -2380,6 +2416,22 @@ public final class CoreMetrics {
     .setQualitative(true)
     .setBestValue(1.0)
     .setWorstValue(5.0)
+    .create();
+
+  /**
+   * @since 5.5
+   */
+  public static final String EFFORT_TO_REACH_SECURITY_RATING_A_KEY = "effort_to_reach_security_rating_a";
+
+  /**
+   * @since 5.5
+   */
+  public static final Metric<Long> EFFORT_TO_REACH_SECURITY_RATING_A = new Metric.Builder(EFFORT_TO_REACH_SECURITY_RATING_A_KEY, "Effort to reach security rating A", Metric.ValueType.WORK_DUR)
+    .setDomain(DOMAIN_SECURITY)
+    .setDirection(Metric.DIRECTION_WORST)
+    .setQualitative(true)
+    .setBestValue(0.0)
+    .setOptimizedBestValue(true)
     .create();
 
   // --------------------------------------------------------------------------------------------------------------------
